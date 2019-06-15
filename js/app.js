@@ -1,7 +1,7 @@
 'use strict';
 
 var dropDownSection = document.getElementById('items');
-
+var dropDownOp = document.createElement(`option`);
 
 // Cart constructor.
 var Cart = function(items) {
@@ -11,6 +11,7 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+
 };
 
 Cart.prototype.saveToLocalStorage = function() {

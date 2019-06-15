@@ -11,15 +11,13 @@ var quantity = 0;
 function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
-  var selectElement = document.getElementById('items');
-  for(var i = 0; i < Product.allProducts.length; i++) {
-    var dropDownOp = document.createElement(`option`);
+  var dropDownOp = document.createElement(`items`).value;
+    
   dropDownOp.textContent = `${Product.allProducts[i].name}`;
-  // dropDownOp.value = `${Product.allProducts[i].name}`;
   dropDownSection.appendChild(dropDownOp);
   }
 
-}
+
 
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
@@ -41,7 +39,18 @@ function addSelectedItemToCart() {
   quantity = document.getElementById('quantity').value;
   alert(quantity);
   // TODO: suss out the item picked from the select list
-  var selectedItem = document.getElementsByTagName(`option`).value;
+  var selectedItem = document.getElementsById(`items`).value;
+
+
+
+  // console.log(selectedItem);
+  // for(var i = 0; i < selectedItem.length; i++){
+  //   if(selectedItem[i].selected = true){
+  //     selectedItem[i].value;
+  //     console.log(selectedItem[i].value);
+  //     console.log(selectedItem[i].selected);
+  //   }
+  // }
   alert(selectedItem);
 
   // TODO: get the quantity
