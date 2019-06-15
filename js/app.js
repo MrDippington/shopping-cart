@@ -1,5 +1,8 @@
 'use strict';
 
+var dropDownSection = document.getElementById('items');
+
+
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -29,6 +32,11 @@ var Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
   Product.allProducts.push(this);
+  // var dropDownOp = document.createElement(`option`);
+  // dropDownOp.textContent = `${this.name}`;
+  // dropDownSection.appendChild(dropDownOp);
+  
+
 };
 Product.allProducts = [];
 
