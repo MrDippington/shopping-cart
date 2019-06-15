@@ -6,6 +6,7 @@
 var cart = new Cart([]);
 var quantity = 0;
 var selectElement = document.getElementById('items');
+var selectedItem;
 
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
@@ -41,11 +42,10 @@ function handleSubmit(event) {
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   quantity = document.getElementById('quantity').value;
-  alert(quantity);
-  console.log(quantity);
   // TODO: suss out the item picked from the select list
-  var selectedItem = document.getElementById('items').value;;
-  alert(selectedItem);
+  selectedItem = document.getElementById('items').value;
+  Cart.prototype.addItem(selectedItem, quantity);
+  
 
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
@@ -64,7 +64,7 @@ function updateCartPreview() {
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
 var catalogForm = document.getElementById('catalog');
-catalogForm.addEventListener('submit', handleSubmit);
+catalogForm.addEventListener('submit', handleSubmit); 
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
