@@ -1,7 +1,7 @@
 'use strict';
 
 var dropDownSection = document.getElementById('items');
-var dropDownOp = document.createElement(`option`);
+
 
 // Cart constructor.
 var Cart = function(items) {
